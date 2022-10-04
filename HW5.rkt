@@ -1,8 +1,6 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
-#reader(lib "htdp-intermediate-reader.ss" "lang")((modname li-z-yang-b-hw5-1) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #t)))
-;; user Name: Boyi(byang4@wpi.edu) & Zehai(zli28@wpi.edu)
-
+#reader(lib "htdp-intermediate-reader.ss" "lang")((modname HW5) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #t)))
 ;; Problem 1
 ;; river?: Any -> Boolean
 ;; a river is a (make-river String Number ListOfRiver)
