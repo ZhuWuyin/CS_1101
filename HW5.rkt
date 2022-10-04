@@ -1,6 +1,6 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
-#reader(lib "htdp-intermediate-reader.ss" "lang")((modname HW5) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #t)))
+#reader(lib "htdp-intermediate-reader.ss" "lang")((modname li-z-yang-b-hw5-1) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #t)))
 ;; user Name: Boyi(byang4@wpi.edu) & Zehai(zli28@wpi.edu)
 
 ;; Problem 1
@@ -113,11 +113,11 @@
 ;; find-subsystem: String River -> River or Boolean
 ;; consumes the name of a river and a river system and produces either a river system or false. The function returns the portion of the original river system that has the named river as its root. If there is no river in the system with the given name, the function returns false
 (define (find-subsystem name river) (local [(define (helper1 name river) (cond [(river? river) (cond [(string=? (river-name river) name) (list river)]
-                                                                                                    [(empty? (river-tributaries river)) empty]
-                                                                                                    [else (append (helper1 name (first (river-tributaries river))) (helper1 name (rest (river-tributaries river))))])]
-                                                                              [(empty? river) empty]
-                                                                              [else (append (helper1 name (first river)) (helper1 name (rest river)))]))] (cond [(empty? (helper1 name river)) #f]
-                                                                                                                                                                [else (first (helper1 name river))])))
+                                                                                                     [(empty? (river-tributaries river)) empty]
+                                                                                                     [else (append (helper1 name (first (river-tributaries river))) (helper1 name (rest (river-tributaries river))))])]
+                                                                               [(empty? river) empty]
+                                                                               [else (append (helper1 name (first river)) (helper1 name (rest river)))]))] (cond [(empty? (helper1 name river)) #f]
+                                                                                                                                                                 [else (first (helper1 name river))])))
 (check-expect (find-subsystem "l" river14) river12)
 (check-expect (find-subsystem "a" river14) river1)
 (check-expect (find-subsystem "b" river14) river2)
