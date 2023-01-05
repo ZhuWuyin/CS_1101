@@ -1,5 +1,4 @@
 // File: Date.c
-
 // A type of time
 typedef struct date {
     unsigned int year;
