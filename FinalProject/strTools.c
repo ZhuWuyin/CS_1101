@@ -1,3 +1,4 @@
+// File: strTools.c
 char* strSlide(char* str, size_t start, size_t end){
     if (start>=end){
         return "";
